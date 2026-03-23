@@ -1,0 +1,21 @@
+{
+  "name": "qora-portfolio",
+  "version": "1.0.0",
+  "description": "QORA Portfolio - Anime-AI Hybrid",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static HTML - no build step needed'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "portfolio",
+    "anime",
+    "ai"
+  ],
+  "author": "PRINCE-DPMORELabs",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
