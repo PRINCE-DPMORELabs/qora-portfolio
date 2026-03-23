@@ -1,141 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QORA Portfolio | Anime-AI Hybrid</title>
-    
-    <meta name="character-id" content="prj_Psgjj6c5YycBBjKZrerou4MXvoA0">
-
+    <title>SWAARA & QORA - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --accent-pink: #ff2e63;
-            --neon-cyan: #08d9d6;
-            --dark-bg: #0d1117;
-            --card-gray: #161b22;
-        }
-
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--dark-bg);
-            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            background: radial-gradient(circle at center, #1a1f3a 0%, #0a0e27 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
             margin: 0;
-            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
-        header {
-            width: 100%;
-            padding: 80px 20px;
-            text-align: center;
-            background: linear-gradient(180deg, #16213e 0%, var(--dark-bg) 100%);
-            border-bottom: 1px solid rgba(255, 46, 99, 0.3);
-        }
-
-        .sys-id {
-            display: inline-block;
-            background: rgba(8, 217, 214, 0.05);
-            color: var(--neon-cyan);
-            font-family: 'Courier New', monospace;
-            padding: 10px 20px;
-            border-radius: 4px;
-            border: 1px solid var(--neon-cyan);
-            font-size: 0.8rem;
-            margin-top: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin-top: 50px;
-        }
-
-        .card {
-            background: var(--card-gray);
-            padding: 30px;
-            border-radius: 12px;
-            border-left: 4px solid var(--accent-pink);
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-left-color: var(--neon-cyan);
-        }
-
-        h1 { font-size: 3rem; margin: 0; letter-spacing: -1px; color: var(--accent-pink); }
-        h2 { font-size: 1.5rem; color: var(--neon-cyan); margin-top: 0; }
-        p { line-height: 1.7; color: #8b949e; font-size: 1.1rem; }
-
-        .tech-stack {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .tag {
+        .glow-text { text-shadow: 0 0 15px #00f3ff; }
+        .glass {
             background: rgba(255, 255, 255, 0.05);
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            color: #c9d1d9;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            width: 90%;
+            max-width: 500px;
+            margin: 1rem;
         }
-
-        footer {
-            margin-top: 60px;
-            padding-bottom: 40px;
-            font-size: 0.8rem;
-            color: #484f58;
-            letter-spacing: 1px;
-        }
+        .neon-border { border: 1px solid #00f3ff; box-shadow: 0 0 15px #00f3ff; }
     </style>
 </head>
-<body>
+<body class="py-10">
 
-<header>
-    <h1>QORA PORTFOLIO</h1>
-    <p style="color: #c9d1d9; font-size: 1.2rem;">Merging Anime Aesthetics with Artificial Intelligence</p>
-    
-    <div class="sys-id">
-        Verified Project ID: prj_Psgjj6c5YycBBjKZrerou4MXvoA0
-    </div>
-</header>
+    <header class="text-center mb-10 px-4">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-2">
+            DPMORE LABS
+        </h1>
+        <p class="text-cyan-300 text-sm tracking-widest uppercase">3D Art & AI Project</p>
+    </header>
 
-<div class="container">
-    <div class="card">
-        <h2>Project QORA</h2>
-        <p>A sophisticated Anime-Human hybrid AI persona. Designed and rendered using Unreal Engine 5 and Blender to explore the future of virtual interaction.</p>
-        <div class="tech-stack">
-            <span class="tag">Unreal Engine 5</span>
-            <span class="tag">Blender</span>
-            <span class="tag">Digital Art</span>
+    <div class="glass neon-border">
+        <div class="flex items-center gap-4 mb-4">
+            <span class="text-4xl">🐱</span>
+            <h2 class="text-2xl font-bold text-cyan-400 glow-text">SWAARA</h2>
+        </div>
+        <div class="space-y-2 text-gray-300 text-sm">
+            <p><strong>ID:</strong> SWA-2026-MINI</p>
+            <p><strong>Type:</strong> Hyper-realistic 3D Kitten</p>
+            <p class="italic text-cyan-500 mt-2">"सह्याद्रीची छोटी किमया."</p>
         </div>
     </div>
 
-    <div class="card" style="border-left-color: #f9d423;">
-        <h2>Swaara</h2>
-        <p>A high-fidelity 3D character design of a tiny baby kitten. Focused on expressive animations and realistic digital fur grooming.</p>
-        <div class="tech-stack">
-            <span class="tag">Character Design</span>
-            <span class="tag">3D Modeling</span>
+    <div class="glass border-purple-500 shadow-[0_0_15px_#b837f4]">
+        <div class="flex items-center gap-4 mb-4">
+            <span class="text-4xl">🤖</span>
+            <h2 class="text-2xl font-bold text-purple-400" style="text-shadow: 0 0 15px #b837f4;">QORA AI</h2>
+        </div>
+        <div class="space-y-2 text-gray-300 text-sm">
+            <p><strong>ID:</strong> QORA-HYBRID-01</p>
+            <p><strong>Type:</strong> Anime-Human Hybrid AI</p>
+            <p class="italic text-purple-400 mt-2">"The future of intelligent art."</p>
         </div>
     </div>
 
-    <div class="card" style="border-left-color: var(--neon-cyan);">
-        <h2>Technical Expertise</h2>
-        <p>Specializing in 3D workflows, gaming technology, and audio optimization (Realme Buds Air 8 Tuning / Dolby Atmos).</p>
-    </div>
-</div>
-
-<footer>
-    &copy; 2026 PRINCE-DPMORELabs | Powered by Vercel
-</footer>
+    <footer class="mt-auto py-6 text-gray-500 text-xs">
+        <p>&copy; 2026 Prince | Sahyadri Chi Kanya</p>
+    </footer>
 
 </body>
 </html>
