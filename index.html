@@ -3,91 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: #0e0e10;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+        }
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('your-hero-image-url.jpg') no-repeat center center / cover;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        @media (max-width: 768px) {
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <title>Portfolio</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">My Portfolio</div>
-            <div class="hamburger-menu">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#swaara">Swaara Project</a></li>
-                <li><a href="#qora-ai">QORA AI</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Explore my projects and experiences</p>
-            <a href="#swaara" class="btn">View Projects</a>
-        </div>
-    </section>
-
+<nav>
+    <a href="#home">Home</a>
+    <a href="#swaara">SWAARA Project</a>
+    <a href="#qora-ai">QORA AI</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+<div class="hero" id="home">
+    <h1>Welcome to My Portfolio</h1>
+</div>
+<div class="container">
     <section id="swaara">
-        <h2>Swaara Project</h2>
-        <p>Description of the Swaara project goes here.</p>
+        <div class="card">
+            <h2>SWAARA Project</h2>
+            <p>Description of the SWAARA Project.</p>
+        </div>
     </section>
-
     <section id="qora-ai">
-        <h2>QORA AI Section</h2>
-        <p>Description of the QORA AI section goes here.</p>
+        <div class="card">
+            <h2>QORA AI</h2>
+            <p>Description of the QORA AI section.</p>
+        </div>
     </section>
-
     <section id="gallery">
         <h2>Gallery</h2>
-        <div class="gallery-items">
-            <img src="image1.jpg" alt="Image 1">
-            <img src="image2.jpg" alt="Image 2">
-            <img src="image3.jpg" alt="Image 3">
+        <div class="gallery">
+            <img src="your-image-url1.jpg" alt="3D Render 1">
+            <img src="your-image-url2.jpg" alt="3D Render 2">
+            <img src="your-image-url3.jpg" alt="3D Render 3">
         </div>
     </section>
-
     <section id="contact">
         <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+        <form class="contact-form" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
         </form>
     </section>
-
-    <footer>
-        <div class="social-links">
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="#">Twitter</a>
-        </div>
-    </footer>
-
-    <script>
-        const hamburger = document.querySelector('.hamburger-menu');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Smooth scrolling
-        const scrollLinks = document.querySelectorAll('a[href^="#"]');
-        scrollLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+</div>
 </body>
 </html>
