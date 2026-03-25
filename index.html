@@ -1,72 +1,93 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWAARA & QORA - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Orbitron', sans-serif;
-            background: radial-gradient(circle at center, #1a1f3a 0%, #0a0e27 100%);
-            color: #e0e0e0;
-            min-height: 100vh;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .glow-text { text-shadow: 0 0 15px #00f3ff; }
-        .glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 243, 255, 0.2);
-            padding: 2rem;
-            border-radius: 1.5rem;
-            width: 90%;
-            max-width: 500px;
-            margin: 1rem;
-        }
-        .neon-border { border: 1px solid #00f3ff; box-shadow: 0 0 15px #00f3ff; }
-    </style>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
-<body class="py-10">
-
-    <header class="text-center mb-10 px-4">
-        <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-2">
-            DPMORE LABS
-        </h1>
-        <p class="text-cyan-300 text-sm tracking-widest uppercase">3D Art & AI Project</p>
-    </header>
-
-    <div class="glass neon-border">
-        <div class="flex items-center gap-4 mb-4">
-            <span class="text-4xl">🐱</span>
-            <h2 class="text-2xl font-bold text-cyan-400 glow-text">SWAARA</h2>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">My Portfolio</div>
+            <div class="hamburger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#swaara">Swaara Project</a></li>
+                <li><a href="#qora-ai">QORA AI</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        <div class="space-y-2 text-gray-300 text-sm">
-            <p><strong>ID:</strong> SWA-2026-MINI</p>
-            <p><strong>Type:</strong> Hyper-realistic 3D Kitten</p>
-            <p class="italic text-cyan-500 mt-2">"सह्याद्रीची छोटी किमया."</p>
-        </div>
-    </div>
+    </nav>
 
-    <div class="glass border-purple-500 shadow-[0_0_15px_#b837f4]">
-        <div class="flex items-center gap-4 mb-4">
-            <span class="text-4xl">🤖</span>
-            <h2 class="text-2xl font-bold text-purple-400" style="text-shadow: 0 0 15px #b837f4;">QORA AI</h2>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my projects and experiences</p>
+            <a href="#swaara" class="btn">View Projects</a>
         </div>
-        <div class="space-y-2 text-gray-300 text-sm">
-            <p><strong>ID:</strong> QORA-HYBRID-01</p>
-            <p><strong>Type:</strong> Anime-Human Hybrid AI</p>
-            <p class="italic text-purple-400 mt-2">"The future of intelligent art."</p>
-        </div>
-    </div>
+    </section>
 
-    <footer class="mt-auto py-6 text-gray-500 text-xs">
-        <p>&copy; 2026 Prince | Sahyadri Chi Kanya</p>
+    <section id="swaara">
+        <h2>Swaara Project</h2>
+        <p>Description of the Swaara project goes here.</p>
+    </section>
+
+    <section id="qora-ai">
+        <h2>QORA AI Section</h2>
+        <p>Description of the QORA AI section goes here.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-items">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+        </div>
     </footer>
 
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scrolling
+        const scrollLinks = document.querySelectorAll('a[href^="#"]');
+        scrollLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
